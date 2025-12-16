@@ -1,48 +1,27 @@
-# MedConnect
+Primeiro, execute o servidor de desenvolvimento:
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
-```bash
 npm run dev
-# or
+# ou
 yarn dev
-# or
+# ou
 pnpm dev
-# or
+# ou
 bun dev
-```
+Abra http://localhost:3000 no seu navegador para ver o resultado.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Você pode começar a editar a página modificando app/page.tsx. A página atualiza automaticamente conforme você edita o arquivo.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este projeto usa next/font para otimizar e carregar automaticamente Geist, uma nova família de fontes da Vercel.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Saiba Mais
+Para aprender mais sobre Next.js, confira os seguintes recursos:
 
-## Learn More
+Documentação do Next.js - conheça os recursos e a API do Next.js.
+Aprenda Next.js - um tutorial interativo de Next.js.
+Você também pode visitar o repositório do Next.js no GitHub - seu feedback e contribuições são bem-vindos!
 
-To learn more about Next.js, take a look at the following resources:
+Executando um servidor de sinalização local (para chamadas de vídeo reais)
+Este projeto inclui um servidor mínimo de sinalização WebSocket usado pela implementação de demonstração do WebRTC.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Running a local signaling server (for real video calls)
-
-This project includes a minimal WebSocket signaling server used by the demo WebRTC implementation.
-
-1. Install the `ws` package if you haven't already: `npm install` (it is included in devDependencies)
-2. Start the signaling server: `npm run signaling` (runs `scripts/signaling-server.js` on ws://localhost:4000)
-3. Start the app: `npm run dev`
-
-Open the app on two devices or browsers, login as `Médico` on one and `Paciente` on the other (they must use the same `consultationId` — the app uses the query/consultation id to join the same room). The video call will use the signaling server to exchange SDP and ICE so each side sees the other's camera.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Instale o pacote ws se ainda não tiver feito isso: npm install (ele está incluído em devDependencies)
+Inicie o servidor de sinalização: npm run signaling (executa scripts/signaling-server.js em ws://localhost:4000)
